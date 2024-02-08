@@ -3,31 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--white: #ffffff;
+	--black: #1f292e;
+	--gray: #384145;
+	--light-gray: #6b7275;
+	--background: #f6f6f7;
+	--primary: #29af8c;
+	--secondary: #ebb02f;
+	--error: #d21e27;
+	--danger: #ebd22f;
+	--success: #34bc62;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-family: var(--font-noto-sans-tc), 'PingFangTC-Regular', 'Microsoft JhengHei', 'Roboto', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	outline: none;
+}
+
+canvas {
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	margin: 0;
+	overflow: overlay;
+	width: 100%;
+	background-color: var(--white);
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
 }

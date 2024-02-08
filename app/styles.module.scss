@@ -1,0 +1,95 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+	background-color: #fafafa;
+	position: relative;
+
+	& .headerWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 16px;
+		height: 64px;
+		box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
+		background-color: #fff;
+		position: fixed;
+		width: calc(100vw - 16px * 2);
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+
+		& .date {
+			font-size: 16px;
+		}
+
+		& .isToday {
+			position: absolute;
+			font-size: 10px;
+			bottom: 6px;
+			left: 50%;
+			right: auto;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	& .contentWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		padding: calc(64px + 16px) 16px 16px;
+		flex: 1;
+
+		& .titleWrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		& .nutritionBoard {
+			display: flex;
+			gap: 8px;
+
+			& > div {
+				flex: 1;
+
+				& > div {
+					padding: 8px;
+
+					& p {
+						font-size: 12px;
+						font-weight: 700;
+					}
+
+					& .progressWrapper {
+						display: flex;
+						justify-content: space-between;
+						margin: 4px 0;
+
+						& span {
+							font-size: 10px;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+
+		& .info {
+			display: flex;
+			gap: 4px;
+
+			& span {
+				padding: 4px;
+				font-size: 10px;
+				height: auto;
+				width: 44px;
+				text-align: center;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+		}
+	}
+}
