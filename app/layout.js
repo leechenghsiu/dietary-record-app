@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from 'next/font/google';
 
 import { Providers } from './provider';
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
 				<Suspense>
 					<Providers>{children}</Providers>
 				</Suspense>
+				<SpeedInsights />
 			</body>
 		</html>
 	);
